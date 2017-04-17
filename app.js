@@ -7,6 +7,7 @@ var cors = require('cors');
 
 var app = express();
 app.use(cors());
+app.use('/Resume', express.static('Resume'));
 logger.info('Inside App'+config.dbConfig());
 
 sql.connect(config.dbConfig()).then(function(){
