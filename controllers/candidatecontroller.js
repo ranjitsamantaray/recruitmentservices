@@ -54,7 +54,7 @@ module.exports = function(app, candidaterouter){
       var uploadFileName = req.files.resume.name;
       uploadFileName = uploadFileName.replace('.','_');
       // Use the mv() method to place the file somewhere on your server
-      sampleFile.mv('Resume/'+ uploadFileName, function(err) {
+      sampleFile.mv('Resume/'+ uploadFileName +'.pdf' , function(err) {
         if (err)
           return res.status(500).send(err);
 
